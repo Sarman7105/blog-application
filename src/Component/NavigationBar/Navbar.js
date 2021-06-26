@@ -7,7 +7,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
 				<div className="container">
 					<Link className="navbar-brand" to="/">
-						Event maker
+						Smart Blog
 					</Link >
 					<button
 						className="navbar-toggler"
@@ -24,12 +24,6 @@ const Navbar = () => {
 						<div className="navbar-nav">
 							<Link  className="nav-link active" aria-current="page" to="/home">
 								Home
-							</Link >
-							<Link  className="nav-link" to="/addBlog">
-								AddBlog
-							</Link >
-							<Link  className="nav-link" to="/Blog">
-								Blog
 							</Link >
 							<Link  className="nav-link" to="/manage">
 								Manage Blog

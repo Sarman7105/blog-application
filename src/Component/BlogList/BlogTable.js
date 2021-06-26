@@ -39,15 +39,13 @@ const BlogTable = ({ blogs}) => {
                     {blogs.map((blog) => {
                         index++;
                         return (
-                            <tr>
+                             <tr>
                                 <th scope="row">{ index}</th>
-							<td>{blog.title}</td>
+							    <td>{blog.title}</td>
                             <td>
-
-                                <button onClick={()=>handleDeleteBlog(blog._id)} className="btn btn-danger">Delete </button>
-                                    
+                                <button onClick={()=>handleDeleteBlog(blog._id)} className="btn btn-danger">Delete </button>     
                             </td>
-						</tr>
+						</tr>      
                         )
 						
 					})}

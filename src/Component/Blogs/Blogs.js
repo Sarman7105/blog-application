@@ -6,7 +6,6 @@ const Blogs = ({blogs}) => {
 
     return (
         <div className="container">
-            this is blog container
             <div className="row">
                 <col-md-8>
                     <div className='row'>
