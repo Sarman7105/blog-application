@@ -1,8 +1,30 @@
 import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
-const BlogTable = ({ blogs }) => {
+const BlogTable = ({ blogs}) => {
     // console.log(blogs);
+    const url = `https://powerful-tor-41926.herokuapp.com/addBlog`;
+	// const url = 'http://localhost:5055/addBlog';
+
     let index = 0;
+    const history = useHistory();
+
+    const handleClick=() => {
+        history.push("/addBlog")
+    }
+
+    const handleDeleteBlog = (id) => {
+        console.log(id);
+        
+        
+        fetch(`http://localhost:5055/deleteBlog/${id}`, {
+            method:'Delete'
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log("Deleted successfully");
+        })
+    }
 	return (
 		<div>
 			<table className="table table-striped">
@@ -22,7 +44,7 @@ const BlogTable = ({ blogs }) => {
 							<td>{blog.title}</td>
                             <td>
 
-                                <button className="btn btn-danger">Delete </button>
+                                <button onClick={()=>handleDeleteBlog(blog._id)} className="btn btn-danger">Delete </button>
                                     
                             </td>
 						</tr>
@@ -30,7 +52,8 @@ const BlogTable = ({ blogs }) => {
 						
 					})}
 				</tbody>
-			</table>
+            </table>
+            <button onClick={handleClick} className="btn btn-success">Create Blog</button>
 		</div>
 	);
 };

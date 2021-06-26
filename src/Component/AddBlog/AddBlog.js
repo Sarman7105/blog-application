@@ -19,6 +19,9 @@ const AddBlog = () => {
 		};
 		console.log(blogData);
 		postData(blogData);
+		setTitle('');
+		setBlogDetails('');
+		setBlogImg('')
 
 		event.preventDefault();
     };
@@ -79,7 +82,8 @@ const AddBlog = () => {
 								className="form-control"
 								name="title"
 								placeholder="Blog Title"
-								onBlur={handleOnBlur}
+								value={title}
+								onChange={handleOnBlur}
 							/>
 						</div>
 						
@@ -90,7 +94,7 @@ const AddBlog = () => {
 							<label className="form-label">
 								Example textarea
 							</label>
-							<textarea className="form-control" name="description" onBlur={handleOnBlur} rows="3" />
+							<textarea className="form-control" value={blogDetails} name="description" onChange={handleOnBlur} rows="3" />
 						</div>
 						<div className="mb-3">
                     	

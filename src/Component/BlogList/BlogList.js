@@ -4,6 +4,7 @@ import BlogTable from './BlogTable';
 
 const BlogList = () => {
     const [blogs, setBlogs] = useState([]);
+    // const [isBlogChanged, setIsBlogChanged] = useState(false);
     const url = `https://powerful-tor-41926.herokuapp.com/blogs`;
     useEffect(() => {
         fetch(url).then(res => res.json()).then(data => setBlogs(data));
