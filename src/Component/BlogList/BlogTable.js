@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-const BlogTable = ({ blogs}) => {
+const BlogTable = ({ blogs,setBlogs}) => {
     // console.log(blogs);
-    const url = `https://powerful-tor-41926.herokuapp.com/addBlog`;
-	// const url = 'http://localhost:5055/addBlog';
+    // const url = `https://powerful-tor-41926.herokuapp.com/addBlog`;
+	// // const url = 'http://localhost:5055/addBlog';
 
     let index = 0;
     const history = useHistory();
@@ -17,12 +17,13 @@ const BlogTable = ({ blogs}) => {
         console.log(id);
         
         
-        fetch(`http://localhost:5055/deleteBlog/${id}`, {
+        fetch(`https://powerful-tor-41926.herokuapp.com/deleteBlog/${id}`, {
             method:'Delete'
         })
             .then(res => res.json())
             .then(result => {
                 console.log("Deleted successfully");
+                setBlogs(blogs.filter((blog)=>blog._id!==id))
         })
     }
 	return (

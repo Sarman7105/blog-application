@@ -44,7 +44,7 @@ const BlogList = () => {
         <div className="blog-list-container">
             <div className="container">
                 {
-                    isAdmin ? <BlogTable blogs={blogs}></BlogTable> : 
+                    isAdmin ? <BlogTable blogs={blogs} setBlog={setBlogs}></BlogTable> : 
                     <Login
                         handleSubmit={handleSubmit}
                         setEmail={setEmail}
