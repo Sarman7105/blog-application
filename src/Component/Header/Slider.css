@@ -6,7 +6,10 @@
 }
 .header-container{
     padding: 10px;
-    height: 850px;
+    /* height: 850px; */
     background: #f8f8f8;
    
+}
+.slider-container{
+    max-height: 850px;
 }

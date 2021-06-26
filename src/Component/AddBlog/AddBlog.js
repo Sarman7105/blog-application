@@ -5,7 +5,7 @@ import './AddBlog.css';
 const AddBlog = () => {
 
     const [blogImg, setBlogImg] = useState('');
-    const [isDisable, setIsDisable] = useState(false);
+    const [isDisable, setIsDisable] = useState(true);
 	const [title, setTitle] = useState('');
 	const [blogDetails, setBlogDetails] = useState('');
 	
@@ -33,8 +33,8 @@ const AddBlog = () => {
 	};
 	
 	const postData = (blogData) => {
-		// const url = `https://powerful-tor-41926.herokuapp.com/addBlog`;
-		const url = 'http://localhost:5055/addBlog';
+		const url = `https://powerful-tor-41926.herokuapp.com/addBlog`;
+		// const url = 'http://localhost:5055/addBlog';
 
 		// console.log(eventData);
 		fetch(url, {

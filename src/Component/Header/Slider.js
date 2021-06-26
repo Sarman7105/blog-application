@@ -3,7 +3,7 @@ import './Slider.css';
 
 const Slider = () => {
 	return (
-		<div className="container">
+		<div className="container slider-container">
 			<div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
 				<div className="carousel-inner">
 					<div className="carousel-item active" data-bs-interval="2500">
