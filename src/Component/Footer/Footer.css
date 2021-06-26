@@ -1,0 +1,15 @@
+.footer-container{
+    margin-top: 5px;
+    width: 100%;
+    min-height: 200px;
+    background: #ffffff;
+    padding: 10px;
+}
+.inner-footer{
+    min-height: 180px;
+}
+
+.theme-color{
+    background-color: #81b37a;
+    color: #fff;
+}

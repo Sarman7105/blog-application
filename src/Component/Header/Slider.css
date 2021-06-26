@@ -1,0 +1,12 @@
+.slider-image{
+    margin-top: 50px;
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+.header-container{
+    padding: 10px;
+    height: 850px;
+    background: #f8f8f8;
+   
+}
